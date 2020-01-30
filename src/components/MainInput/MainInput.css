@@ -1,0 +1,10 @@
+.MainInput {
+
+    height: 300px;
+    width: 100%;
+    display:block;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px;
+
+}

@@ -1,0 +1,33 @@
+.MainMenu {
+    background: #282c34;
+    border-radius: 5px;
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: inline-block;
+    height: 25px;
+    text-align: center;
+    padding: 0;
+    color: white;
+}
+
+.MainMenu>li {
+
+    display: inline;
+    margin: 6px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.MainMenu>li:hover {
+    background-color: darkgoldenrod;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    color: rgb(122, 216, 216);
+}

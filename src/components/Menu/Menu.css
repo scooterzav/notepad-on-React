@@ -1,0 +1,30 @@
+
+
+.Menu {
+    user-select: none;
+}
+
+.Menu>ul {
+    list-style: none;
+    cursor: pointer;
+    text-align: left;
+    margin: 2px 0px;
+    padding:0px;
+
+}
+
+.Menu>ul>li {
+    color:#fff;
+    font-size: .8rem;
+    display: inline;
+    margin: 1px;
+    padding: 0px 10px;
+    border-left: 1px solid darkcyan;
+    border-top: 1px solid darkcyan;
+    border-right: 1px solid darkcyan;
+    border-radius: 3px;
+}
+
+.Menu>ul>li:hover {
+    background-color: darkgoldenrod;
+}
