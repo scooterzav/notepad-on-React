@@ -3,7 +3,7 @@ import './SubMenu.css'
 
 export default function SubMenu(props) {
     return (
-        <div className='SubMenu'>
+        <div className='SubMenu' style={props.style}>
             <ul>
                 {props.items.map((item,index)=>
                     <li 

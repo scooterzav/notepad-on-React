@@ -1,22 +1,30 @@
+import * as fireBase from './../../fireBase'
+
+function loadingVisible(visible) {
+    const LoadingIcon = document.getElementById('LoadingIcon');
+    LoadingIcon.style.display = visible ? 'inline-block' : 'none'
+}
+
 export function save() {
-    const mainInput = document.querySelector('.MainInput');
-    console.log('send to server: ',mainInput.value);
+    alert('In developing');
 }
 
-export function saveAs() {
-    const mainInput = document.querySelector('.MainInput');
-    console.log('send to server as: ',mainInput.value);
+export async function saveAs(popupDispatch) {
+    loadingVisible(true);
+    const serverData = await fireBase.get();
+    loadingVisible(false);
+    popupDispatch({handler:"SHOW", title:'SAVE TO SERVER', type:"server", data:{query:'post', serverData:serverData}});
 }
 
-export function open() {
-    const mainInput = document.querySelector('.MainInput');
-    let textFromServer = "this is text";
-    mainInput.value = textFromServer;
+export async function open(popupDispatch) {
+    loadingVisible(true);
+    const serverData = await fireBase.get();
+    loadingVisible(false);
+    popupDispatch({handler:"SHOW", title:'OPEN FROM SERVER', type:"server", data:{query:'get', serverData:serverData}});
 }
 
 export function clear() {
-    const mainInput = document.querySelector('.MainInput');
-    mainInput.value = ''; 
+    document.querySelector('.MainInput').value = '';
 }
 
 

@@ -7,12 +7,27 @@
     }
 }
 
+/* Анимация для SubMenu через компонент react-transition-group */
+.sub-enter {
+    opacity: 0;
+}
+.sub-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+
+.sub-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+/* ------------------------------------------------------------ */
 .SubMenu {
     margin-top: 2px;
     display: block;
     position: absolute;
-    animation: opac .2s 1 linear;
+    /* animation: opac .2s 1 linear; */
 }
+
 .SubMenu>ul {
     margin:0;
     text-align: left;
